@@ -1,0 +1,153 @@
+#My main HTML File
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porsche</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link type="text/css" rel="stylesheet" href="main.css">
+  <style>
+    body {
+      color: #bbbbbb;
+      background: #333333;
+    }
+    a {
+      color: #08f;
+    }
+    .colorPicker {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    .card {
+      width: 100%;
+      margin-bottom: 20px; /* Spacing between cards */
+    }
+    .card-text {
+      color: rgb(0, 0, 0); /* Adjust text color for better visibility */
+      font-family: Arial, sans-serif; /* Change the font */
+    }
+  </style>  
+  <style>
+    /* CSS for sidebar */
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px; /* Initially hidden */
+      background-color: #1d2656;
+      padding-top: 20px;
+      transition: left 0.3s ease;
+    }
+    .sidebar.active {
+      left: 0; /* Visible when active */
+    }
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .sidebar li {
+      padding: 10px;
+      color: #fff;
+    }
+    .sidebar a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      color: #ffcc00;
+    }
+    .toggle-btn {
+      position: absolute;
+      left: 250px; /* Adjust based on sidebar width */
+      top: 20px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+  <h1>Porsche</h1>
+<div class="sidebar" id="sidebar">
+  <ul>
+    <li>
+      <a href="#">Welcome</a>
+      <ul>
+        <li><a href="./views/Login.html">Login\reister</a></li>
+        <li><a href="About_us.html">About us</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="Login.html">login\register</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="About_us.html">About us </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Contact.html">Contact</a>
+    </li>
+  </ul>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3"> <!-- Adjust the number of columns based on screen size -->
+      <div class="col">
+        <div class="card">
+          <img class="card-img-top" src="porsche_cayenne_e_hybrid_2023_4k-3840x2160.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Porsche Cayenne</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img class="card-img-top" src="porsche_macan_turbo_2024_8k-7680x4320.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Porsche Macan</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img class="card-img-top" src="porsche_911_gt3_cozy-5120x2880.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Porsche 911</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img class="card-img-top" src="porsche_taycan_turbo_gt_weissach_package_2024_8k-7680x4320.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Porsche Taycan</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img class="card-img-top" src="porsche_panamera_turbo_e_hybrid_sonderwunsch_2024_8k-7680x4320.jpg" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Porsche Panamera</p>
+          </div>
+        </div>
+      </div>
+      <!-- Add more cards here -->
+    </div>
+  </div>
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
